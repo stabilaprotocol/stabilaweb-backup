@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img align="center" src="https://raw.githubusercontent.com/stabila-us/stabilaweb/master/assets/StabilaWeb-logo.png" width="400"/>
+  <img align="center" src="https://raw.githubusercontent.com/stabilaprotocol/wiki/master/images/Logo_Stabila_WhiteMetal.png" width="200"/>
 </h1>
 
 <p align="center">
@@ -26,15 +26,13 @@
 
 ## What is StabilaWeb?
 
-__[Stabila Web - Developer Document](https://developers.stabila.network/docs/stabila-web-intro)__
-
 StabilaWeb aims to deliver a unified, seamless development experience influenced by Ethereum's [Web3](https://github.com/ethereum/web3.js/) implementation. We have taken the core ideas and expanded upon it to unlock the functionality of STABILA's unique feature set along with offering new tools for integrating DApps in the browser, Node.js and IoT devices.
 
 ## Compatibility
 - Version built for Node.js v6 and above
 - Version built for browsers with more than 0.25% market share
 
-You can access either version specifically from the [dist](dist) folder.
+You can access either version specifically from the dist folder.
 
 StabilaWeb is also compatible with frontend frameworks such as:
 - Angular
@@ -65,32 +63,6 @@ so that you can call it in your HTML page as
 ```
 <script src="./js/stabilaweb.js"><script>
 ```
-
-## Testnet
-
-Testnet is the official Stabila testnet. To use it use the following endpoint:
-```
-https://api.testnet.stabilagrid.io
-```
-Get some Testnet STB at https://www.stabilagrid.io/testnet and play with it.
-Anything you do should be explorable on https://testnet.stabilascan.org
-
-## Your local private network for heavy testing
-
-You can set up your own private network, running Stabila Quickstart. To do it you must [install Docker](https://docs.docker.com/install/) and, when ready, run a command like
-
-```bash
-docker run -it --rm \
-  -p 9090:9090 \
-  -e "defaultBalance=100000" \
-  -e "showQueryString=true" \
-  -e "showBody=true" \
-  -e "formatJson=true" \
-  --name stabila \
-  stabilatools/quickstart
-```
-
-[More details about Stabila Quickstart on GitHub](https://github.com/stabila-us/docker-stabila-quickstart)
 
 ## Creating an Instance
 
@@ -299,5 +271,5 @@ StabilaWeb is distributed under a MIT licence.
 
 -----
 
-For more historic data, check the original repo at
-[https://github.com/stabilaprotocol/stabila-web](https://github.com/stabilaprotocol/stabila-web)
+## Suggestions, Feedback & Issues
+If you have a suggestion for improvement, feedback about a specific feature or any issue please contact us at info@stabilascan.org
