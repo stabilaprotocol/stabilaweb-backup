@@ -674,8 +674,8 @@ export default class TransactionBuilder {
                         value = toHex(value).replace(ADDRESS_PREFIX_REGEX, '0x');
                     else if (type.match(/^([^\x5b]*)(\x5b|$)/)[0] === 'address[')
                         value = value.map(v => toHex(v).replace(ADDRESS_PREFIX_REGEX, '0x'));
-                    else if (/trcToken/.test(type)) {
-                        type = type.replace(/trcToken/, 'uint256')
+                    else if (/srctoken/.test(type)) {
+                        type = type.replace(/srctoken/, 'uint256')
                     }
 
                     types.push(type);
@@ -850,10 +850,10 @@ export default class TransactionBuilder {
                 }
 
                 try {
-                    // workaround for unsupported trcToken type
+                    // workaround for unsupported srctoken type
                     types = types.map(type => {
-                        if (/trcToken/.test(type)) {
-                            type = type.replace(/trcToken/, 'uint256')
+                        if (/srctoken/.test(type)) {
+                            type = type.replace(/srctoken/, 'uint256')
                         }
                         return type
                     })
