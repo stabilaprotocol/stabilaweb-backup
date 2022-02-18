@@ -1,4 +1,4 @@
-const fullHost = "http://127.0.0.1:" + (process.env.HOST_PORT || 9090)
+const fullHost = "https://api.stabilascan.org"
 
 module.exports = {
 
@@ -9,8 +9,8 @@ module.exports = {
     SOLIDITY_NODE_API: fullHost,
     EVENT_API: fullHost,
     NETWORK_ID: "*",
-    ADDRESS_HEX: 'a03c8bbb6372966a201898ab7c6bb126f60283a729',
-    ADDRESS_BASE58: '27UbeUdgTpKMGp2R32nke7TFrnS1pXEwkhD',
+    ADDRESS_HEX: '3f0cac53e21c3e37c7be72ff39119e292e6a02d8a4',
+    ADDRESS_BASE58: 'SNT1agQERBWRPPKkn5W4med85yobAvsCHj',
     UPDATED_TEST_TOKEN_OPTIONS: {
         description: 'Very useless utility token',
         url: 'https://none.example.com',
@@ -86,8 +86,8 @@ Djyb5403LJztsxdExbyQkm++Gg631CZus4xA77wMafGw37IhCE6sTBo=
             fullNode: 'https://unittest.stabilaex.io',
             solidityNode: 'https://unittest.stabilaex.io',
             eventServer: 'https://unittest.stabilaex.io',
-            mainGatewayAddress: 'TFLtPoEtVJBMcj6kZPrQrwEdM3W3shxsBU',
-            sideGatewayAddress: 'TRDepx5KoQ8oNbFVZ5sogwUxtdYmATDRgX',
+            mainGatewayAddress: 'SVRt486dq776qg92bYfc8YQ49YUs89SEmB',
+            sideGatewayAddress: 'SVRt486dq776qg92bYfc8YQ49YUs89SEmB',
             sideChainId: '413AF23F37DA0D48234FDD43D89931E98E1144481B'
         }
     },

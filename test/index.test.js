@@ -426,8 +426,8 @@ describe('StabilaWeb Instance', function () {
         });
 
         it('should reset the private key if the address doesn\'t match', function () {
-            const stabilaWeb = stabilaWebBuilder.createInstance();
 
+            const stabilaWeb = stabilaWebBuilder.createInstance();
             assert.equal(stabilaWeb.defaultPrivateKey, PRIVATE_KEY);
 
             stabilaWeb.setAddress(
@@ -435,8 +435,8 @@ describe('StabilaWeb Instance', function () {
             );
 
             assert.equal(stabilaWeb.defaultPrivateKey, false);
-            assert.equal(stabilaWeb.defaultAddress.hex, '41928c9af0651632157ef27a2cf17ca72c575a4d28');
-            assert.equal(stabilaWeb.defaultAddress.base58, 'TPL66VK2gCXNCD7EJg9pgJRfqcRbnn4zcp');
+            assert.equal(stabilaWeb.defaultAddress.hex, '3f0cac53e21c3e37c7be72ff39119e292e6a02d8a4');
+            assert.equal(stabilaWeb.defaultAddress.base58, 'SNT1agQERBWRPPKkn5W4med85yobAvsCHj');
         });
 
         it('should not reset the private key if the address matches', function () {
@@ -886,25 +886,25 @@ describe('StabilaWeb Instance', function () {
     describe("#isAddress", function () {
         it("should verify that a string is a valid base58 address", function () {
 
-            let input = 'TYPG8VeuoVAh2hP7Vfw6ww7vK98nvXXXUG';
+            let input = 'SVRt486dq776qg92bYfc8YQ49YUs89SEmB';
             assert.equal(StabilaWeb.isAddress(input), true);
         });
 
         it("should verify that a string is an invalid base58 address", function () {
 
-            let input = 'TYPG8VeuoVAh2hP7Vfw6ww7vK98nvXXXUs';
+            let input = 'SVRt486dqw76qg92bYfc8YQ49YUs89SEmB';
             assert.equal(StabilaWeb.isAddress(input), false);
 
-            input = 'TYPG8VeuoVAh2hP7Vfw6ww7vK98nvXXXUG89';
+            input = 'SVRt486dq776qg92bYfc8YQ49YUs89SEmB2';
             assert.equal(StabilaWeb.isAddress(input), false);
 
-            input = 'aYPG8VeuoVAh2hP7Vfw6ww7vK98nvXXXUG';
+            input = 'aYPG8VeuoVAh2hP7Vfw6w7vK98nvXXXUG';
             assert.equal(StabilaWeb.isAddress(input), false);
         });
 
         it("should verify that a string is a valid hex address", function () {
 
-            let input = '4165cfbd57fa4f20687b2c33f84c4f9017e5895d49';
+            let input = '3f10ae68a8dedc82cc9ec34e26550fbd6ae75ef5bc';
             assert.equal(StabilaWeb.isAddress(input), true);
         });
 
