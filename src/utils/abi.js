@@ -43,7 +43,7 @@ export function encodeParams(types, values) {
 
     for (let i = 0; i < types.length; i++) {
         if (types[i] === 'address') {
-            values[i] = StabilaWeb.address.toHex(values[i]);
+            values[i] = StabilaWeb.address.toHex(values[i]).replace(ADDRESS_PREFIX_REGEX, '0x');
         }
     }
 
