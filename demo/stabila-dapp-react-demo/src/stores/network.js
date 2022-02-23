@@ -23,7 +23,7 @@ export default class NetworkStore {
   }
 
   getDescription = (type, item, text) => {
-    // console.log('description type: ', type);
+    // //console.log('description type: ', type);
     const { tx, title, status } = item;
     let className = '';
     switch (type) {
@@ -148,7 +148,7 @@ export default class NetworkStore {
         try {
           this.checkPendingTransactions();
         } catch (err) {
-          console.log('interval error:' + err);
+          //console.log('interval error:' + err);
         }
       }, 3000);
     }
@@ -197,7 +197,7 @@ export default class NetworkStore {
         }
       }, 1000);
     } catch (e) {
-      console.log(e);
+      //console.log(e);
     }
   };
 

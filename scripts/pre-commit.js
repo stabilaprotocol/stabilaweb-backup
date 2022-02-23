@@ -38,12 +38,12 @@ if (!process.env.SKIPPRECOMMIT) {
 
         test.stderr.on('data', function (data) {
             errors = true
-            console.log('stderr: ' + data.toString())
+            //console.log('stderr: ' + data.toString())
         })
 
         test.on('exit', function (code) {
             if (errors) {
-                console.log(chalk.red('Tests have failed. Please verify tests are passing before pushing'));
+                //console.log(chalk.red('Tests have failed. Please verify tests are passing before pushing'));
                 process.exit(1);
             }
             if (fs.existsSync(resultFile)) {
@@ -55,7 +55,7 @@ if (!process.env.SKIPPRECOMMIT) {
     })
 
 } else {
-    console.log('echo "Test skipped before git commit" >> ' + resultFile)
+    //console.log('echo "Test skipped before git commit" >> ' + resultFile)
     fs.writeFileSync(resultFile, 'Test skipped before git commit.')
     execSync('git add -A')
     process.exit(0);

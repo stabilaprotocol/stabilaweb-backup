@@ -39,7 +39,7 @@ const getInstance = () => {
 const newTestAccounts = async (amount) => {
     const stabilaWeb = createInstance();
 
-    console.log(chalk.blue(`Generating ${amount} new accounts...`))
+    //console.log(chalk.blue(`Generating ${amount} new accounts...`))
     await stabilaWeb.fullNode.request('/admin/temporary-accounts-generation?accounts=' + amount);
     const lastCreated = await getTestAccounts(-1)
     jlog(lastCreated.b58)

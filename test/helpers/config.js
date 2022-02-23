@@ -9,8 +9,8 @@ module.exports = {
     SOLIDITY_NODE_API: fullHost,
     EVENT_API: fullHost,
     NETWORK_ID: "*",
-    ADDRESS_HEX: '3f0cac53e21c3e37c7be72ff39119e292e6a02d8a4',
-    ADDRESS_BASE58: 'SNT1agQERBWRPPKkn5W4med85yobAvsCHj',
+    ADDRESS_HEX: '3f79d481a70f4b85fe74c5520292ab3a25bdf8a87a',
+    ADDRESS_BASE58: 'SYQBNG5AnUvh1uiDF3GHNyWzt7Rf5o5bkE',
     UPDATED_TEST_TOKEN_OPTIONS: {
         description: 'Very useless utility token',
         url: 'https://none.example.com',

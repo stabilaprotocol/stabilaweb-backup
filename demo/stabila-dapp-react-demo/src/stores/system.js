@@ -60,7 +60,7 @@ export default class SystemStore {
       if (error && error.message == 'Confirmation declined by user') {
         this.openTransModal({ ...intlObj, step: 3 });
       }
-      console.log(`trigger error ${address} - ${functionSelector}`, error.message ? error.message : error);
+      //console.log(`trigger error ${address} - ${functionSelector}`, error.message ? error.message : error);
       return {};
     }
   };
@@ -90,7 +90,7 @@ export default class SystemStore {
 
   transferToken = async (to, value) => {
     const intlObj = {};
-    console.log(Config.contract.usdt);
+    //console.log(Config.contract.usdt);
     const result = await this.trigger(
       Config.contract.usdt,
       'transfer(address,uint256)',

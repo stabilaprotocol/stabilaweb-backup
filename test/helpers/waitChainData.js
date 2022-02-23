@@ -82,7 +82,7 @@ module.exports = async function (type, ...params) {
             await wait(1);
             continue;
         }
-        // console.log(...params, 'wait for chain data result: ', isFound, data, type);
+        // //console.log(...params, 'wait for chain data result: ', isFound, data, type);
         if (isFound)
             return;
         log(`waiting for unconfirmed data,${type}...`);

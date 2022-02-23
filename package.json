@@ -1,6 +1,6 @@
 {
   "name": "webstabila",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "JavaScript SDK that encapsulates the STABILA HTTP API",
   "main": "dist/StabilaWeb.node.js",
   "scripts": {

@@ -39,7 +39,7 @@ export const sign = async transaction => {
     const signedTransaction = await stabilaweb.stb.sign(transaction.transaction);
     return signedTransaction;
   } catch (error) {
-    console.log(error, 'signerr');
+    //console.log(error, 'signerr');
     throw new Error(error);
   }
 };
@@ -68,7 +68,7 @@ export const view = async (address, functionSelector, parameters = [], isDappSta
     );
     return result && result.result ? result.constant_result : [];
   } catch (error) {
-    console.log(`view error ${address} - ${functionSelector}`, error.message ? error.message : error);
+    //console.log(`view error ${address} - ${functionSelector}`, error.message ? error.message : error);
     return [];
   }
 };
@@ -85,7 +85,7 @@ export const getStbBalance = async (address, isDappStabilaWeb = false) => {
       success: true
     };
   } catch (err) {
-    console.log(`getPairBalance: ${err}`, address);
+    //console.log(`getPairBalance: ${err}`, address);
     return {
       balance: BigNumber(0),
       success: false
@@ -107,7 +107,7 @@ export const getTransactionInfo = tx => {
 };
 
 export const getTRC20Balance = async (tokenAddress, userAddress) => {
-  console.log('params of getbalance: ', userAddress, tokenAddress);
+  //console.log('params of getbalance: ', userAddress, tokenAddress);
   const result = await view(tokenAddress, 'balanceOf(address)', [{ type: 'address', value: userAddress }]);
   let value = BigNumber(0);
   let success = false;
